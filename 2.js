@@ -162,34 +162,34 @@
 
 
     // Tu dinh nghia ham filter()
-Array.prototype.filter2 = function(callback)
-{
-  arrlength = this.length
-  output = []
-  for(var i = 0; i < arrlength; ++i){
-    var result = callback(this[i])
-    if(result == true)
-    {
-      output.push(this[i])
-    }
-  }
-  return output
-}
+// Array.prototype.filter2 = function(callback)
+// {
+//   arrlength = this.length
+//   output = []
+//   for(var i = 0; i < arrlength; ++i){
+//     var result = callback(this[i])
+//     if(result == true)
+//     {
+//       output.push(this[i])
+//     }
+//   }
+//   return output
+// }
 
     // Su dung ham filter()
-strings = ['Javascript', 'PHP', 'Học PHP','Java']
-keyword = 'Java'
-function findStringsInArrayByKeyword(keyword, strings) {
-  let r = strings.filter2(function (item){
-      return item.search(keyword) != -1
-  })
-  if(r)
-  {
-      return r
-  }
-  return ""
-}
-console.log(findStringsInArrayByKeyword(keyword,strings))
+// strings = ['Javascript', 'PHP', 'Học PHP','Java']
+// keyword = 'Java'
+// function findStringsInArrayByKeyword(keyword, strings) {
+//   let r = strings.filter2(function (item){
+//       return item.search(keyword) != -1
+//   })
+//   if(r)
+//   {
+//       return r
+//   }
+//   return ""
+// }
+// console.log(findStringsInArrayByKeyword(keyword,strings))
 
 
 
