@@ -7,7 +7,7 @@
 //     console.log(name)
 // }
     // Doi voi array - for in lay ra index, con for of lay ra value 
-    // Doi voi object - for in lay ra phan tu trong object,
+    // Doi voi object - for in lay ra key trong object
 // For of - lay ra gia tri tung phan tu trong array
 // arrNumber = [1,5,7,11,44]
 // function multiply(arr)
@@ -167,16 +167,16 @@
   //     })
   // }
   // console.log(convertToBoolean(inputs))  
-  let apartment = {
-        bedroom: {
-          area: 20,
-          bed: {
-            type: 'twin-bed',
-            price: 100
-          }
-        }
-      };
-    for(let value of apartment)
-    {
-      console.log(value)
-    }
+
+
+numbers = [{}, 1, [], 2, 'hi', 0, 6]
+function sumNumbers(inputs) {
+  return inputs.reduce(function(a,b){
+      if(typeof b == 'number')
+      {
+        return a + b
+      }
+      return a 
+  }, 0)
+}
+console.log(sumNumbers(numbers))
