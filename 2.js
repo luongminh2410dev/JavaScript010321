@@ -169,14 +169,26 @@
   // console.log(convertToBoolean(inputs))  
 
 
-numbers = [{}, 1, [], 2, 'hi', 0, 6]
-function sumNumbers(inputs) {
-  return inputs.reduce(function(a,b){
-      if(typeof b == 'number')
-      {
-        return a + b
-      }
-      return a 
-  }, 0)
-}
-console.log(sumNumbers(numbers))
+// numbers = [{}, 1, [], 2, 'hi', 0, 6]
+// function sumNumbers(inputs) {
+//   return inputs.reduce(function(a,b){
+//       if(typeof b == 'number')
+//       {
+//         return a + b
+//       }
+//       return a 
+//   }, 0)
+// }
+// console.log(sumNumbers(numbers))
+    // Ham includes() de tim kiem trong string, array
+// let arr1 = ['F8','Minh','F9']
+// function run(input) {
+    
+//   if(typeof input == 'string' || typeof input == 'object'){
+//       if(input.includes('F8')){
+//           return true
+//       }
+//   }
+//   return false
+// }
+// console.log(run(arr1))
