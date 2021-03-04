@@ -45,6 +45,7 @@
 // }
 // getkey(apartment)
 
+  //Cach su dung continue
 // for(var i = 1; i <=10; i ++)
 // {
 //   if(i % 2 != 0)
@@ -53,6 +54,23 @@
 //   }
 //   console.log(i)
 // }
+
+
+
+    // Tu dinh nghia ham forEach()
+// Array.prototype.forEach2 = function(callback)
+// {
+//   var arraylength = this.length
+//   var output = []
+//   for(var i = 0; i < arraylength; ++i)
+//   {
+//     var result = callback(this[i], i)
+//     output.push(result)
+//   }
+//   return output
+// }
+
+    // Su dung ham forEach()
 // formValues = [
 //     {
 //       field: 'name', 
@@ -72,14 +90,49 @@
 //   console.log(obj)
 // }
 // getRequestBodyFromValues(formValues)
-// let numbers = [4, 2, 3]
+
+
+    // Tu dinh nghia ham every
+// Array.prototype.every2 = function(callback){
+//   var arrlength = this.length
+//   for(var i = 0; i < arrlength; ++i)
+//   {
+//     var result = callback(this[i])
+//     if(result == false)
+//     {
+//       return false
+//     }
+//   }
+//   return true
+// }
+
+    // Su dung ham every()
+// let numbers = [-4, 2, 3]
 
 // function checkPositiveNumbers(numbers) {
-//     return numbers.every(function(item){
+//     return numbers.every2(function(item){
 //       return item > 0
 //     })
 // }
 // console.log(checkPositiveNumbers(numbers))
+
+
+    // Tu dinh nghia ham find()
+// Array.prototype.find2 = function(callback)
+// {
+//   arraylength = this.length
+//   for(var i = 0; i < arraylength; ++i)
+//   {
+//     var result = callback(this[i])
+//     if(result == true)
+//     {
+//       return this[i]
+//     }
+//   }
+//   return null
+// }
+
+    // Su dung ham find()
 // let monsters = [
 //     {
 //         name: 'Cá heo',
@@ -95,8 +148,8 @@
 //     },
 // ]
 // function findAMonsterByAttack(monsters) {
-//   let v = monsters.find(function(monter){
-//       return monter.attack === 110
+//   let v = monsters.find2(function(monter){
+//       return monter.attack === 150
 //   })
 //   if(v)
 //   {
@@ -106,19 +159,40 @@
 // }
 // console.log(findAMonsterByAttack(monsters))
 
-// strings = ['Javascript', 'PHP', 'Học PHP']
-// keyword = 'PHP'
-// function findStringsInArrayByKeyword(keyword, strings) {
-//   let r = strings.filter(function (item){
-//       return item.search(keyword) != -1
-//   })
-//   if(r)
-//   {
-//       return r
-//   }
-//   return ""
-// }
-// console.log(findStringsInArrayByKeyword(keyword,strings))
+
+
+    // Tu dinh nghia ham filter()
+Array.prototype.filter2 = function(callback)
+{
+  arrlength = this.length
+  output = []
+  for(var i = 0; i < arrlength; ++i){
+    var result = callback(this[i])
+    if(result == true)
+    {
+      output.push(this[i])
+    }
+  }
+  return output
+}
+
+    // Su dung ham filter()
+strings = ['Javascript', 'PHP', 'Học PHP','Java']
+keyword = 'Java'
+function findStringsInArrayByKeyword(keyword, strings) {
+  let r = strings.filter2(function (item){
+      return item.search(keyword) != -1
+  })
+  if(r)
+  {
+      return r
+  }
+  return ""
+}
+console.log(findStringsInArrayByKeyword(keyword,strings))
+
+
+
 // array1 = [1, 2, 6, 8]
 // array2 = [2, 9, 6]
 // function findEqualValues(array1, array2)
@@ -141,17 +215,17 @@
 
 
 
-// ARRAY MAP()
-  // let inputs = [0, 1, 2]
-  // function convertToBoolean(inputs) {
-  //     return inputs.map(function convert(item){
-  //         if(item)
-  //         {
-  //           return true
-  //         }
-  //         return false
-  //     })
-  // }
+    // ARRAY MAP()
+// let inputs = [0, 1, 2]
+// function convertToBoolean(inputs) {
+//     return inputs.map(function convert(item){
+//         if(item)
+//         {
+//           return true
+//         }
+//         return false
+//     })
+// }
 
   // let inputs = [1, 2, 3]
   // function convertToBoolean(inputs) {
