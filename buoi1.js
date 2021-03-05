@@ -36,7 +36,6 @@
 //     for(keyName in object)
 //     {
 //         console.log(keyName)
-//         // console.log(typeof object[keyName])
 //         if(typeof object[keyName] == 'object')
 //         {
 //             getkey(object[keyName])
@@ -169,36 +168,36 @@
 
 
     // Tu dinh nghia ham filter()
-Array.prototype.filter2 = function(callback)
-{
-  output = []
-  for(var i in this){
-    if(this.hasOwnProperty(i))
-    {
-        var result = callback(this[i])
-        if(result)
-        {
-            output.push(this[i])
-        }
-    }
-  }
-  return output
-}
+// Array.prototype.filter2 = function(callback)
+// {
+//   output = []
+//   for(var i in this){
+//     if(this.hasOwnProperty(i))
+//     {
+//         var result = callback(this[i])
+//         if(result)
+//         {
+//             output.push(this[i])
+//         }
+//     }
+//   }
+//   return output
+// }
 
     // Su dung ham filter()
-strings = ['Javascript', 'PHP', 'Học PHP','Java']
-keyword = 'Java'
-function findStringsInArrayByKeyword(keyword, strings) {
-  let r = strings.filter2(function (item){
-      return item.search(keyword) != -1
-  })
-  if(r)
-  {
-      return r
-  }
-  return ""
-}
-console.log(findStringsInArrayByKeyword(keyword,strings))
+// strings = ['Javascript', 'PHP', 'Học PHP','Java']
+// keyword = 'Java'
+// function findStringsInArrayByKeyword(keyword, strings) {
+//   let r = strings.filter2(function (item){
+//       return item.search(keyword) != -1
+//   })
+//   if(r)
+//   {
+//       return r
+//   }
+//   return ""
+// }
+// console.log(findStringsInArrayByKeyword(keyword,strings))
 
 
 
@@ -263,15 +262,16 @@ console.log(findStringsInArrayByKeyword(keyword,strings))
 //   }, 0)
 // }
 // console.log(sumNumbers(numbers))
+
+
     // Ham includes() de tim kiem trong string, array
 // let arr1 = ['F8','Minh','F9']
-// function run(input) {
-    
+// function run(input) {   
 //   if(typeof input == 'string' || typeof input == 'object'){
 //       if(input.includes('F8')){
 //           return true
 //       }
 //   }
-//   return false
+//   return falses
 // }
 // console.log(run(arr1))
