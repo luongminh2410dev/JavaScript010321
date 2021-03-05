@@ -60,12 +60,14 @@
     // Tu dinh nghia ham forEach()
 // Array.prototype.forEach2 = function(callback)
 // {
-//   var arraylength = this.length
 //   var output = []
-//   for(var i = 0; i < arraylength; ++i)
+//   for(var i in this)
 //   {
-//     var result = callback(this[i], i)
-//     output.push(result)
+//       if(this.hasOwnProperty(i))
+//       {
+//         var result = callback(this[i], i)
+//         output.push(result)
+//       }
 //   }
 //   return output
 // }
@@ -94,16 +96,18 @@
 
     // Tu dinh nghia ham every
 // Array.prototype.every2 = function(callback){
-//   var arrlength = this.length
-//   for(var i = 0; i < arrlength; ++i)
-//   {
-//     var result = callback(this[i])
-//     if(result == false)
+//     for(var i in this)
 //     {
-//       return false
+//         if(this.hasOwnProperty(i))
+//         {
+//             var result = callback(this[i])
+//             if(!result)
+//             {
+//                 return false
+//             }
+//         }
 //     }
-//   }
-//   return true
+//     return true
 // }
 
     // Su dung ham every()
@@ -117,17 +121,20 @@
 // console.log(checkPositiveNumbers(numbers))
 
 
+
     // Tu dinh nghia ham find()
 // Array.prototype.find2 = function(callback)
 // {
-//   arraylength = this.length
-//   for(var i = 0; i < arraylength; ++i)
+//   for(var i in this)
 //   {
-//     var result = callback(this[i])
-//     if(result == true)
-//     {
-//       return this[i]
-//     }
+//      if(this.hasOwnProperty(i))
+//      {
+//          var result = callback(this[i])
+//          if(result)
+//          {
+//              return this[i]
+//          }
+//      }
 //   }
 //   return null
 // }
@@ -162,34 +169,36 @@
 
 
     // Tu dinh nghia ham filter()
-// Array.prototype.filter2 = function(callback)
-// {
-//   arrlength = this.length
-//   output = []
-//   for(var i = 0; i < arrlength; ++i){
-//     var result = callback(this[i])
-//     if(result == true)
-//     {
-//       output.push(this[i])
-//     }
-//   }
-//   return output
-// }
+Array.prototype.filter2 = function(callback)
+{
+  output = []
+  for(var i in this){
+    if(this.hasOwnProperty(i))
+    {
+        var result = callback(this[i])
+        if(result)
+        {
+            output.push(this[i])
+        }
+    }
+  }
+  return output
+}
 
     // Su dung ham filter()
-// strings = ['Javascript', 'PHP', 'Học PHP','Java']
-// keyword = 'Java'
-// function findStringsInArrayByKeyword(keyword, strings) {
-//   let r = strings.filter2(function (item){
-//       return item.search(keyword) != -1
-//   })
-//   if(r)
-//   {
-//       return r
-//   }
-//   return ""
-// }
-// console.log(findStringsInArrayByKeyword(keyword,strings))
+strings = ['Javascript', 'PHP', 'Học PHP','Java']
+keyword = 'Java'
+function findStringsInArrayByKeyword(keyword, strings) {
+  let r = strings.filter2(function (item){
+      return item.search(keyword) != -1
+  })
+  if(r)
+  {
+      return r
+  }
+  return ""
+}
+console.log(findStringsInArrayByKeyword(keyword,strings))
 
 
 
