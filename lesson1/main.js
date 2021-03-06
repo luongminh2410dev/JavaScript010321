@@ -46,7 +46,7 @@ var myString = '    Hoc JS tai F8!    '
     console.log(myString2.charAt(2))
 
     var title = 'Học Javascript tại F8'
-    var language = title.slice(4,14).substring()
+    var language = title.slice(4,14).toString()
     var rest = title.slice(15).toString()
 
     console.log( `Language is ${language} and rest is ${rest}`)
